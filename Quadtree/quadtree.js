@@ -35,9 +35,6 @@ class Rectangle {
     );
   }
 
-
-
-
  }
  
 class QuadTree {
