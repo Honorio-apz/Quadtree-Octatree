@@ -24,21 +24,25 @@ class Box{
     }
 
     contains(point){
-        return (point.x >= (this.x - this.w) && 
-        point.x <= (this.x + this.w) && 
-        point.y >= (this.y - this.h) && 
-        point.y <= (this.y + this.h) &&
-        point.z >= (this.z - this.d) &&
-        point.z <= (this.z + this.d)); 
+        return (
+            point.x >= (this.x - this.w) && 
+            point.x <= (this.x + this.w) && 
+            point.y >= (this.y - this.h) && 
+            point.y <= (this.y + this.h) &&
+            point.z >= (this.z - this.d) &&
+            point.z <= (this.z + this.d)
+        ); 
     }
 
     intersects(box){
-        return !(box.x - box.w > this.x + this.w  ||
-        box.x + box.w < this.x - this.w  ||
-        box.y - box.h > this.y + this.h  ||
-        box.y + box.h < this.y - this.h  ||
-        box.z - box.d > this.z + this.d  ||
-        box.z + box.d < this.z - this.d);
+        return !(
+            box.x - box.w > this.x + this.w  ||
+            box.x + box.w < this.x - this.w  ||
+            box.y - box.h > this.y + this.h  ||
+            box.y + box.h < this.y - this.h  ||
+            box.z - box.d > this.z + this.d  ||
+            box.z + box.d < this.z - this.d
+        );
     }
 }
 
